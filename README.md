@@ -1,1 +1,3 @@
-# web-scraping-challenge
+# Web Scraping Challenge
+
+## Boot Camp Module 12
