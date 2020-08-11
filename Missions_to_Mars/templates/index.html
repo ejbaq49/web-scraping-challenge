@@ -37,10 +37,19 @@
         <img width=900px src="{{results.featured_image_url}}" alt="Featured Image"></a>
       </div>
       <div class="col-md-3">
-        <figure class="box box-1">
-          <p>
-          <h4>Current Weather on Mars</h4>{{results.weather_tweet}}</p>
-        </figure>
+        <div class="card" style="width: 20rem;">
+          <div class="card-body">
+            <h5 class="card-subtitle">Current Weather on Mars</h5><hr>
+            <p>
+              {{results.weather_tweet}}</p>
+          </div>
+        </div>
+        <hr>
+        <h4>Mars Facts</h4>
+        <div class="table-responsive">
+          <!-- mark html safe so it will render -->
+          {{results.planet_facts_html | safe}}
+        </div>
       </div>
     </div>
     <hr>
