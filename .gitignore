@@ -6,6 +6,9 @@ __pycache__/
 # C extensions
 *.so
 
+# Test files
+test_scrape.py
+
 # Distribution / packaging
 .Python
 build/
