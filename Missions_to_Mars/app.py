@@ -15,10 +15,12 @@ planet_coll = db.planet_data
 @app.route('/')
 def home():
     results = planet_coll.find_one()
+    # pass data to template html
+    return render_template('index.html', results=results)
 
 
 # add scrape route
-@app.route('/scrape')
+# @app.route('/scrape')
 
 
 
