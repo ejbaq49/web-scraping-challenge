@@ -33,6 +33,9 @@ def scrape_planet():
     db = client.planet_db
     planet_coll = db.planet_data
 
+    # Empty the collection
+
+
 
     # ---------------------------------------
     # SCRAPE PLANET NEWS FOR MARS
@@ -149,6 +152,11 @@ def scrape_planet():
     # ---------------------------------------
     # INSERT RESULT INTO MONGO COLLECTION
     # ---------------------------------------   
+    
+    # Empty collection first
+    planet_coll.remove({})
+
+    # Insert new data
     planet_coll.insert_one(planet_data)
 
     return planet_data

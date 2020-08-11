@@ -1,5 +1,6 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect
 import pymongo
+from scrape import scrape_planet
 
 
 app = Flask(__name__)
@@ -21,7 +22,11 @@ def home():
 
 
 # add scrape route
-# @app.route('/scrape')
+@app.route('/scrape')
+def freshen_data():
+    scrape_planet()
+
+    return redirect("/", code=302)
 
 
 
