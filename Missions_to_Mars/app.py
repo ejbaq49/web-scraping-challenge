@@ -8,11 +8,17 @@ conn = "mongodb://localhost:27017"
 client = pymongo.MongoClient(conn)
 
 # connect to mongo db and collection
+db = client.planet_db
+planet_coll = db.planet_data
 
 # add home route
+@app.route('/')
+def home():
+    results = planet_coll.find_one()
+
 
 # add scrape route
-
+@app.route('/scrape')
 
 
 
