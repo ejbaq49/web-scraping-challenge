@@ -24,14 +24,10 @@ def home():
 # add scrape route
 @app.route('/scrape')
 def freshen_data():
+    # scrape for new data
     scrape_planet()
-
+    # return to home route
     return redirect("/", code=302)
-
-
-
-
-
 
 
 
